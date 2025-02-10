@@ -15,6 +15,7 @@ class CreateInquiriesTable extends Migration
     {
         Schema::create('inquiries', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('item_id')->constrained()->cascadeOnDelete();
             $table->string('name', 255);
             $table->string('email', 255);
             $table->string('tel', 11);
