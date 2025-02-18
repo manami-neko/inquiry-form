@@ -16,4 +16,9 @@ class Inquiry extends Model
         'tel',
         'content'
     ];
+
+    public function item()
+    {
+        return $this->belongsTo(Item::class);
+    }
 }

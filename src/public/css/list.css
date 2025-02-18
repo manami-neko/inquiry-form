@@ -1,0 +1,24 @@
+.inquiry-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.inquiry-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    /* border-collapse: collapse;
+    margin-top: 20px; */
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    /* 灰色の境界線 */
+    padding: 10px;
+    text-align: center;
+}

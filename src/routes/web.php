@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InquiryController;
 use App\Models\Inquiry;
+use App\Models\Item;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,4 @@ use App\Models\Inquiry;
 Route::get('/', [InquiryController::class, 'index']);
 Route::post('/inquiries/confirm', [InquiryController::class, 'confirm']);
 Route::post('/thanks', [InquiryController::class, 'store']);
-// Route::post('/inquiries/confirm', [InquiryController::class, 'update']);
+Route::get('/list', [InquiryController::class, 'list']);

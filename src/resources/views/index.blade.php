@@ -67,14 +67,16 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <select class="item__select" name="item">
-                                <option value="">商品名</option>
+                            <select class="item__select" name="item_id">
+                                <option value="">商品名を選択してください</option>
+                                @foreach ($items as $item)
+                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                @endforeach
                             </select>
-                            <!-- <input type="text" name="name" value="{{ old('name') }}" placeholder="テスト太郎" /> -->
                         </div>
-                        @error('name')
+                        @error('item_id')
                         <div class="form__error">
-                            {{$errors->first('name')}}
+                            {{$errors->first('item_id')}}
                         </div>
                         @enderror
                     </div>

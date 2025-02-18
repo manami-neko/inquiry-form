@@ -27,7 +27,8 @@ class InquiryRequest extends FormRequest
             'name' => 'required|max:255',
             'email'=> 'required|email|max:255',
             'tel' => 'required|size:11',
-            'content' => 'required|max:400'
+            'item_id' => 'required',
+            'content' => 'required|max:500'
         ];
     }
 
@@ -41,8 +42,9 @@ class InquiryRequest extends FormRequest
             'email.email' => '有効なメールアドレスを入力してください',
             'tel.required' => '電話番号を入力してください',
             'tel.size' => '電話番号を11桁で入力してください',
+            'item_id.required' => '商品を選択してください',
             'content.required' => 'お問い合わせ内容を入力してください',
-            'content.max' => 'お問い合わせ内容を400文字以内で入力してください'
+            'content.max' => 'お問い合わせ内容を500文字以内で入力してください'
         ];
     }
 
